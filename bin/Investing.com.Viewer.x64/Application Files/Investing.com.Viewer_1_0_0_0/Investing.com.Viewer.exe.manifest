@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Investing.com.Viewer.exe" version="1.0.0.0" publicKeyToken="a16671c0cbe42e62" language="neutral" processorArchitecture="amd64" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Investing.com.Viewer" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
+    <commandLine file="Investing.com.Viewer.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CefSharp.dll" size="184832">
+      <assemblyIdentity name="CefSharp" version="57.0.0.0" publicKeyToken="40C4B6FC221F4138" language="neutral" processorArchitecture="amd64" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ezVRxU909KA4agJjL1eY1XrDSnGOuzbJtpI67JmrnFU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CefSharp.Core.dll" size="1648128">
+      <assemblyIdentity name="CefSharp.Core" version="57.0.0.0" publicKeyToken="40C4B6FC221F4138" language="neutral" processorArchitecture="amd64" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>fm33CaJKmtH0b5RcH73iEZ1Ba/4EvHAdNCg6Yo01/20=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CefSharp.WinForms.dll" size="23040">
+      <assemblyIdentity name="CefSharp.WinForms" version="57.0.0.0" publicKeyToken="40C4B6FC221F4138" language="neutral" processorArchitecture="amd64" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>fPXQUDcMRM2vDZjaGhpho47o0osCPaCbBH9e+RSKZtw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Investing.com.Viewer.exe" size="68072">
+      <assemblyIdentity name="Investing.com.Viewer" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>8fvnIG/RhX3uXSgNoRcRjzb/Fr2mHEJKitjv+zekfCg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Investing.com.Viewer.exe.config" size="4232">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>k2OZnllBwH8UmewqlSL9PD3hpWetQx+7xk2SjyqhGC4=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-81FTJKQ\Andrew" issuerKeyHash="dddc1e42e9d3bf88fbd4cbb5e03e6a392618ad60" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>OOEgOCOatIyapSm0rzig8JwkQzZGTydF5zbbU4gHEjo=</DigestValue></Reference></SignedInfo><SignatureValue>dI0CGy9eWeK7Eug4iaGam0N6bj5SY0wYmd9auqriK5fo2tSjL/B9haWS25AncFQywCm+3wywtwXBXRpwBA1yZ1p45gNvgEouUld7XobdHkUIBySDCV7/4LDYZqfT1j0QikpRI7cjL97D5nq2pa27k2fqLx3ZO0Z337Ko2zPc9Tw=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>t0+hJnil9ODpS37QkPn5I4UtsNjQo0JXJnTwlBs80vRWHY9fya2n/zNnWCY6KerHB7B4NIRR4Si6RnmgRRo3UtUKXJcu5f8SnaQCxsz0RcxFmCe69O0OhZi96AG0G1Xo1SJsCujSzJWeTxRNG/7wASDIRzTSOMtQXg9MfHgAAIk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="3a12078853db36e745274f463643249cf0a038afb429a59a8cb49a233820e138" Description="" Url=""><as:assemblyIdentity name="Investing.com.Viewer.exe" version="1.0.0.0" publicKeyToken="a16671c0cbe42e62" language="neutral" processorArchitecture="amd64" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-81FTJKQ\Andrew</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>/NGsWqv4oER3UpFHSuvQDt50xx3Vknn1ANPGd603MCM=</DigestValue></Reference></SignedInfo><SignatureValue>Ob9rrM7zsw31xKuwo9+as28937aMjGWDls27iyH4EqkTYg4K7XxCBEePxJYgdMlB5sqGS7FDZ2JfKpFfXgkqKku/iQoqurTrNWTFLfTOHu5TNQBOoGfKF+kXLSOYRNIGu+CUD06Jc81A+fWKfgGJcvrk8JECrnJvJldYtOpevQg=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>t0+hJnil9ODpS37QkPn5I4UtsNjQo0JXJnTwlBs80vRWHY9fya2n/zNnWCY6KerHB7B4NIRR4Si6RnmgRRo3UtUKXJcu5f8SnaQCxsz0RcxFmCe69O0OhZi96AG0G1Xo1SJsCujSzJWeTxRNG/7wASDIRzTSOMtQXg9MfHgAAIk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB8TCCAVqgAwIBAgIQbjJYgbNkWJlFCiAIRGJQezANBgkqhkiG9w0BAQsFADA3MTUwMwYDVQQDHiwARABFAFMASwBUAE8AUAAtADgAMQBGAFQASgBLAFEAXABBAG4AZAByAGUAdzAeFw0xNzExMDUxOTU3MDZaFw0xODExMDYwMTU3MDZaMDcxNTAzBgNVBAMeLABEAEUAUwBLAFQATwBQAC0AOAAxAEYAVABKAEsAUQBcAEEAbgBkAHIAZQB3MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3T6EmeKX04OlLftCQ+fkjhS2w2NCjQlcmdPCUGzzS9FYdj1/Jraf/M2dYJjop6scHsHg0hFHhKLpGeaBFGjdS1Qpcly7l/xKdpALGzPRFzEWYJ7r07Q6FmL3oAbQbVejVImwK6NLMlZ5PFE0b/vABIMhHNNI4y1BeD0x8eAAAiQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAK4bl6sWUoIzvJpl1vZx/Qj5uILdWIbNCMOky16EmJH+ANxD3RxDnRFtb0f0NofuQQ5n+Q3dZD6asMjOYPVUQbjcKh+e4YI6Oi5kix7DbAEcu5q22T1ZOKLYaJGgacKwuChjTXcMqiFkH7EDYlK1RTYNJt/Gmnvqouj/ojldfCz8</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
