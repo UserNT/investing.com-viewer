@@ -341,7 +341,12 @@ namespace Viewer
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            using (var settings = new SettingsForm())
+            {
+                settings.ShowDialog(this);
 
+                ReloadWebPage();
+            }
         }
 
         #endregion
@@ -395,6 +400,7 @@ namespace Viewer
             {
                 Controls.Add(toolStrip);
                 toolStrip.BringToFront();
+                browser.BringToFront();
             }
             else
             {
