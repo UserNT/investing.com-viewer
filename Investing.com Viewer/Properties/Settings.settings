@@ -1,0 +1,66 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Viewer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HomePage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.investing.com/currencies/eur-usd-commentary</Value>
+    </Setting>
+    <Setting Name="IsLogVisible" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FilterIds" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;theBigX&lt;/string&gt;
+  &lt;string&gt;Quotes&lt;/string&gt;
+  &lt;string&gt;broker_promotions&lt;/string&gt;
+  &lt;string&gt;webinars_new&lt;/string&gt;
+  &lt;string&gt;findABroker&lt;/string&gt;
+  &lt;string&gt;theDisclaimer&lt;/string&gt;
+  &lt;string&gt;footerWrapper&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="IsFilterContent" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="IsFilterMessages" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FilterIdsStartsWith" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;div-gpt-ad&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="FilterClasses" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;midHeader&lt;/string&gt;
+  &lt;string&gt;tradeNowRightColumn&lt;/string&gt;
+  &lt;string&gt;js-edukit-wrapper&lt;/string&gt;
+  &lt;string&gt;doubleLineSeperator&lt;/string&gt;
+  &lt;string&gt;curExp&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="FilterMessages" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;/members/201938949&lt;/string&gt;
+  &lt;string&gt;/members/200910201&lt;/string&gt;
+  &lt;string&gt;/members/201725043&lt;/string&gt;
+  &lt;string&gt;/members/200529694&lt;/string&gt;
+  &lt;string&gt;/members/201163763&lt;/string&gt;
+  &lt;string&gt;/members/201251630&lt;/string&gt;
+  &lt;string&gt;/members/200620745&lt;/string&gt;
+  &lt;string&gt;/members/200118885&lt;/string&gt;
+  &lt;string&gt;/members/200024378&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="IsFilterMessagesInverseMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="IsAddressVisible" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
