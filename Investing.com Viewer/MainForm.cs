@@ -218,16 +218,16 @@ namespace Viewer
                 }
                 script.AppendLine("};");
 
-                script.AppendLine("$('[id^=\"comment-\"]').each(function(index, comment) {");
-                script.AppendLine("     AIHideCommentIfNeeded($(comment));");
+                script.AppendLine("$(document).bind('DOMNodeInserted', function(e) {");
+                script.AppendLine("     var jelement = $(e.target);");
+                script.AppendLine("     var id = jelement.attr('id');");
+                script.AppendLine("     if (id && id.lastIndexOf('comment-', 0) === 0) {");
+                script.AppendLine("         AIHideCommentIfNeeded(jelement);");
+                script.AppendLine("     }");
                 script.AppendLine("});");
 
-                script.AppendLine("$('[id^=\"comment-\"]').bind('DOMNodeInserted', function(e) {");
-                script.AppendLine("     var element = e.target;");
-                script.AppendLine("     if (element.id) {");
-                script.AppendLine("         var jdiv = $(element);");
-                script.AppendLine("         AIHideCommentIfNeeded(jdiv);");
-                script.AppendLine("     }");
+                script.AppendLine("$('[id^=\"comment-\"]').each(function(index, comment) {");
+                script.AppendLine("     AIHideCommentIfNeeded($(comment));");
                 script.AppendLine("});");
             }
 

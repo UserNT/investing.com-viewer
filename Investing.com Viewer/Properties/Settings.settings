@@ -54,6 +54,7 @@
   &lt;string&gt;/members/200620745&lt;/string&gt;
   &lt;string&gt;/members/200118885&lt;/string&gt;
   &lt;string&gt;/members/200024378&lt;/string&gt;
+  &lt;string&gt;/members/200352833&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
     <Setting Name="IsFilterMessagesInverseMode" Type="System.Boolean" Scope="User">
