@@ -238,18 +238,17 @@ namespace Viewer
 
         public bool OnPreKeyEvent(IWebBrowser browserControl, IBrowser browser, KeyType type, int windowsKeyCode, int nativeKeyCode, CefEventFlags modifiers, bool isSystemKey, ref bool isKeyboardShortcut)
         {
-            if (windowsKeyCode == (int)Keys.F5)
-            {
-                ReloadWebPage();
-                
-                return true;
-            }
-
             return false;
         }
 
         public bool OnKeyEvent(IWebBrowser browserControl, IBrowser browser, KeyType type, int windowsKeyCode, int nativeKeyCode, CefEventFlags modifiers, bool isSystemKey)
         {
+            if (windowsKeyCode == (int)Keys.F5)
+            {
+                ReloadWebPage();
+
+                return true;
+            }
             return false;
         }
 
