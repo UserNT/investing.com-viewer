@@ -26,6 +26,8 @@ namespace Viewer
             {
                 filterMessagesRadioButton.Checked = true;
             }
+
+            showNotificationsCheckBox.Checked = Settings.Default.ShowNotifications;
         }
 
         private static string Join(StringCollection collection)
@@ -63,6 +65,7 @@ namespace Viewer
             Settings.Default.FilterClasses = Split(filterClassesTextBox.Text);
             Settings.Default.FilterMessages = Split(filterMessagesTextBox.Text);
             Settings.Default.IsFilterMessagesInverseMode = filterMessagesInverseModeRadioButton.Checked;
+            Settings.Default.ShowNotifications = showNotificationsCheckBox.Checked;
 
             Settings.Default.Save();
         }

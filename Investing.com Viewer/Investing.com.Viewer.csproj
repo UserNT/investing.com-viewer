@@ -114,12 +114,14 @@
     <Compile Include="AddressTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="AvatarProvider.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NotificationBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="DotsProgressBar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -173,6 +175,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\html2canvas.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ShowNotification.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\cef.redist.x64.3.2987.1601\build\cef.redist.x64.targets" Condition="Exists('..\packages\cef.redist.x64.3.2987.1601\build\cef.redist.x64.targets')" />

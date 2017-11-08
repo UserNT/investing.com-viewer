@@ -172,5 +172,17 @@ namespace Viewer.Properties {
                 this["IsAddressVisible"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowNotifications {
+            get {
+                return ((bool)(this["ShowNotifications"]));
+            }
+            set {
+                this["ShowNotifications"] = value;
+            }
+        }
     }
 }

@@ -1,18 +1,17 @@
 ﻿using CefSharp;
 using CefSharp.WinForms;
-using Viewer.Properties;
 using System;
-using System.Linq;
-using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
-using System.Configuration;
+using Viewer.Properties;
 
 namespace Viewer
 {
     public partial class MainForm : Form, IKeyboardHandler
     {
+        private readonly ConcurrentDictionary<string, byte> alreadyDisplayedComments = new ConcurrentDictionary<string, byte>();
         private readonly DotsProgressBar progressBar;
         private readonly ChromiumWebBrowser browser;
         private ToolStrip toolStrip;
@@ -67,6 +66,7 @@ namespace Viewer
                 BuildToolStrip();
                 addressToolStripMenuItem.CheckState = BooleanToCheckState(Settings.Default.IsAddressVisible);
 
+                browser.RegisterAsyncJsObject("ai_investing_com_viewer", this);
                 browser.LoadingStateChanged += Browser_LoadingStateChanged;
                 browser.ConsoleMessage += Browser_ConsoleMessage;
                 browser.KeyboardHandler = this;
@@ -146,6 +146,7 @@ namespace Viewer
         private string GetScript()
         {
             var script = new StringBuilder();
+            script.AppendLine(Properties.Resources.html2canvas);
 
             if (Settings.Default.IsFilterContent)
             {
@@ -209,6 +210,7 @@ namespace Viewer
                 script.AppendLine("     var memberPath = jdiv.find('[href^=\"/members/\"]').attr('href');");
                 script.AppendLine("     if (AIShouldHide(memberPath)) {");
                 script.AppendLine("         jdiv.hide();");
+                script.AppendLine("         return true;");
                 script.AppendLine("     }");
                 if (Settings.Default.IsFilterMessagesInverseMode)
                 {
@@ -216,18 +218,34 @@ namespace Viewer
                     script.AppendLine("         jdiv.parent().show();");
                     script.AppendLine("     }");
                 }
+                script.AppendLine("     return false;");
                 script.AppendLine("};");
 
                 script.AppendLine("$(document).bind('DOMNodeInserted', function(e) {");
                 script.AppendLine("     var jelement = $(e.target);");
                 script.AppendLine("     var id = jelement.attr('id');");
                 script.AppendLine("     if (id && id.lastIndexOf('comment-', 0) === 0) {");
-                script.AppendLine("         AIHideCommentIfNeeded(jelement);");
+                script.AppendLine("         if (!AIHideCommentIfNeeded(jelement)) {");
+                if (Settings.Default.ShowNotifications)
+                {
+                    script.AppendLine(Properties.Resources.ShowNotification);
+                }
+                script.AppendLine("         }");
                 script.AppendLine("     }");
                 script.AppendLine("});");
 
                 script.AppendLine("$('[id^=\"comment-\"]').each(function(index, comment) {");
                 script.AppendLine("     AIHideCommentIfNeeded($(comment));");
+                script.AppendLine("});");
+            }
+            else if (Settings.Default.ShowNotifications)
+            {
+                script.AppendLine("$(document).bind('DOMNodeInserted', function(e) {");
+                script.AppendLine("     var jelement = $(e.target);");
+                script.AppendLine("     var id = jelement.attr('id');");
+                script.AppendLine("     if (id && id.lastIndexOf('comment-', 0) === 0) {");
+                script.AppendLine(Properties.Resources.ShowNotification);
+                script.AppendLine("     }");
                 script.AppendLine("});");
             }
 
@@ -439,6 +457,23 @@ namespace Viewer
             using (var about = new AboutForm())
             {
                 about.ShowDialog(this);
+            }
+        }
+
+        public async void onNewComment(string id, string base64, string imagePath)
+        {
+            if (!alreadyDisplayedComments.TryAdd(id, 0))
+            {
+                return;
+            }
+
+            try
+            {
+                var notificationImage = await NotificationBuilder.CreateNotificationImageAsync(base64, imagePath);
+            }
+            catch (Exception ex)
+            {
+                Log(ex.Message);
             }
         }
     }

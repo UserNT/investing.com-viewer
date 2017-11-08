@@ -30,20 +30,21 @@
         {
             this.closeButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.addressTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.filterIdsTextBox = new System.Windows.Forms.TextBox();
             this.filterIdsStartsWithTextBox = new System.Windows.Forms.TextBox();
+            this.filterIdsTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.filterClassesTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.filterMessagesRadioButton = new System.Windows.Forms.RadioButton();
-            this.filterMessagesInverseModeRadioButton = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.filterMessagesTextBox = new System.Windows.Forms.TextBox();
+            this.filterMessagesInverseModeRadioButton = new System.Windows.Forms.RadioButton();
+            this.filterMessagesRadioButton = new System.Windows.Forms.RadioButton();
+            this.showNotificationsCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -71,13 +72,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "General";
             // 
-            // addressTextBox
-            // 
-            this.addressTextBox.Location = new System.Drawing.Point(77, 19);
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(533, 20);
-            this.addressTextBox.TabIndex = 0;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -86,6 +80,13 @@
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Home page:";
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Location = new System.Drawing.Point(77, 19);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(533, 20);
+            this.addressTextBox.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -100,38 +101,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Remove blocks by Id";
             // 
-            // groupBox3
+            // filterIdsStartsWithTextBox
             // 
-            this.groupBox3.Controls.Add(this.filterClassesTextBox);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(218, 74);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(204, 281);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Remove blocks by Class";
+            this.filterIdsStartsWithTextBox.Location = new System.Drawing.Point(6, 196);
+            this.filterIdsStartsWithTextBox.Multiline = true;
+            this.filterIdsStartsWithTextBox.Name = "filterIdsStartsWithTextBox";
+            this.filterIdsStartsWithTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.filterIdsStartsWithTextBox.Size = new System.Drawing.Size(188, 79);
+            this.filterIdsStartsWithTextBox.TabIndex = 3;
             // 
-            // groupBox4
+            // filterIdsTextBox
             // 
-            this.groupBox4.Controls.Add(this.filterMessagesTextBox);
-            this.groupBox4.Controls.Add(this.filterMessagesInverseModeRadioButton);
-            this.groupBox4.Controls.Add(this.filterMessagesRadioButton);
-            this.groupBox4.Location = new System.Drawing.Point(428, 74);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(200, 281);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Filter message";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(6, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 26);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "1. Exact match by id, for example:\r\n<div id=\"ad\"...";
+            this.filterIdsTextBox.Location = new System.Drawing.Point(6, 55);
+            this.filterIdsTextBox.Multiline = true;
+            this.filterIdsTextBox.Name = "filterIdsTextBox";
+            this.filterIdsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.filterIdsTextBox.Size = new System.Drawing.Size(188, 85);
+            this.filterIdsTextBox.TabIndex = 2;
             // 
             // label3
             // 
@@ -144,23 +130,26 @@
             this.label3.Text = "2. Match by id starts with, for example:\r\n<div id=\"ad-12345\"...\r\nwhere 12345 - dy" +
     "namic part";
             // 
-            // filterIdsTextBox
+            // label2
             // 
-            this.filterIdsTextBox.Location = new System.Drawing.Point(6, 55);
-            this.filterIdsTextBox.Multiline = true;
-            this.filterIdsTextBox.Name = "filterIdsTextBox";
-            this.filterIdsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.filterIdsTextBox.Size = new System.Drawing.Size(188, 85);
-            this.filterIdsTextBox.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label2.Location = new System.Drawing.Point(6, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(166, 26);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "1. Exact match by id, for example:\r\n<div id=\"ad\"...";
             // 
-            // filterIdsStartsWithTextBox
+            // groupBox3
             // 
-            this.filterIdsStartsWithTextBox.Location = new System.Drawing.Point(6, 196);
-            this.filterIdsStartsWithTextBox.Multiline = true;
-            this.filterIdsStartsWithTextBox.Name = "filterIdsStartsWithTextBox";
-            this.filterIdsStartsWithTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.filterIdsStartsWithTextBox.Size = new System.Drawing.Size(188, 79);
-            this.filterIdsStartsWithTextBox.TabIndex = 3;
+            this.groupBox3.Controls.Add(this.filterClassesTextBox);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Location = new System.Drawing.Point(218, 74);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(204, 281);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Remove blocks by Class";
             // 
             // filterClassesTextBox
             // 
@@ -181,17 +170,27 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Exact match by class, for example:\r\n<div class=\"ad\"...";
             // 
-            // filterMessagesRadioButton
+            // groupBox4
             // 
-            this.filterMessagesRadioButton.AutoSize = true;
-            this.filterMessagesRadioButton.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.filterMessagesRadioButton.Location = new System.Drawing.Point(12, 24);
-            this.filterMessagesRadioButton.Name = "filterMessagesRadioButton";
-            this.filterMessagesRadioButton.Size = new System.Drawing.Size(165, 30);
-            this.filterMessagesRadioButton.TabIndex = 0;
-            this.filterMessagesRadioButton.TabStop = true;
-            this.filterMessagesRadioButton.Text = "Hide messages from members\r\nin the list";
-            this.filterMessagesRadioButton.UseVisualStyleBackColor = true;
+            this.groupBox4.Controls.Add(this.showNotificationsCheckBox);
+            this.groupBox4.Controls.Add(this.filterMessagesTextBox);
+            this.groupBox4.Controls.Add(this.filterMessagesInverseModeRadioButton);
+            this.groupBox4.Controls.Add(this.filterMessagesRadioButton);
+            this.groupBox4.Location = new System.Drawing.Point(428, 74);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 281);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Filter message";
+            // 
+            // filterMessagesTextBox
+            // 
+            this.filterMessagesTextBox.Location = new System.Drawing.Point(6, 96);
+            this.filterMessagesTextBox.Multiline = true;
+            this.filterMessagesTextBox.Name = "filterMessagesTextBox";
+            this.filterMessagesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.filterMessagesTextBox.Size = new System.Drawing.Size(188, 156);
+            this.filterMessagesTextBox.TabIndex = 2;
             // 
             // filterMessagesInverseModeRadioButton
             // 
@@ -205,14 +204,27 @@
             this.filterMessagesInverseModeRadioButton.Text = "Hide messages from all members\r\nexcept members from the list";
             this.filterMessagesInverseModeRadioButton.UseVisualStyleBackColor = true;
             // 
-            // filterMessagesTextBox
+            // filterMessagesRadioButton
             // 
-            this.filterMessagesTextBox.Location = new System.Drawing.Point(6, 96);
-            this.filterMessagesTextBox.Multiline = true;
-            this.filterMessagesTextBox.Name = "filterMessagesTextBox";
-            this.filterMessagesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.filterMessagesTextBox.Size = new System.Drawing.Size(188, 179);
-            this.filterMessagesTextBox.TabIndex = 2;
+            this.filterMessagesRadioButton.AutoSize = true;
+            this.filterMessagesRadioButton.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.filterMessagesRadioButton.Location = new System.Drawing.Point(12, 24);
+            this.filterMessagesRadioButton.Name = "filterMessagesRadioButton";
+            this.filterMessagesRadioButton.Size = new System.Drawing.Size(165, 30);
+            this.filterMessagesRadioButton.TabIndex = 0;
+            this.filterMessagesRadioButton.TabStop = true;
+            this.filterMessagesRadioButton.Text = "Hide messages from members\r\nin the list";
+            this.filterMessagesRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // showNotificationsCheckBox
+            // 
+            this.showNotificationsCheckBox.AutoSize = true;
+            this.showNotificationsCheckBox.Location = new System.Drawing.Point(6, 258);
+            this.showNotificationsCheckBox.Name = "showNotificationsCheckBox";
+            this.showNotificationsCheckBox.Size = new System.Drawing.Size(112, 17);
+            this.showNotificationsCheckBox.TabIndex = 3;
+            this.showNotificationsCheckBox.Text = "Show notifications";
+            this.showNotificationsCheckBox.UseVisualStyleBackColor = true;
             // 
             // SettingsForm
             // 
@@ -261,5 +273,6 @@
         private System.Windows.Forms.RadioButton filterMessagesInverseModeRadioButton;
         private System.Windows.Forms.RadioButton filterMessagesRadioButton;
         private System.Windows.Forms.TextBox filterMessagesTextBox;
+        private System.Windows.Forms.CheckBox showNotificationsCheckBox;
     }
 }

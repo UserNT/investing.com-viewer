@@ -59,5 +59,56 @@ namespace Viewer.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /*
+        ///  html2canvas 0.4.1 &lt;http://html2canvas.hertzen.com&gt;
+        ///  Copyright (c) 2013 Niklas von Hertzen
+        ///
+        ///  Released under MIT License
+        ///*/
+        ///
+        ///(function(window, document, undefined){
+        ///
+        ///&quot;use strict&quot;;
+        ///
+        ///var _html2canvas = {},
+        ///previousElement,
+        ///computedCSS,
+        ///html2canvas;
+        ///
+        ///_html2canvas.Util = {};
+        ///
+        ///_html2canvas.Util.log = function(a) {
+        ///  if (_html2canvas.logging &amp;&amp; window.console &amp;&amp; window.console.log) {
+        ///    window.console.log(a);
+        ///  }
+        ///};
+        ///
+        ///_html2canvas.Util.trimText = (function(isNative){
+        ///  return functio [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string html2canvas {
+            get {
+                return ResourceManager.GetString("html2canvas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to              var imagePath = jelement.find(&apos;img:first-of-type&apos;).attr(&apos;src&apos;);
+        ///             var scrollPos = document.body.scrollTop;
+        ///             html2canvas(jelement, {
+        ///                 onrendered: function(canvas) {
+        ///                     window.scrollTo(0, scrollPos);
+        ///                     var base64 = canvas.toDataURL(&apos;image/png&apos;);
+        ///                     ai_investing_com_viewer.onNewComment(id, base64, imagePath);
+        ///                 }
+        ///             });.
+        /// </summary>
+        internal static string ShowNotification {
+            get {
+                return ResourceManager.GetString("ShowNotification", resourceCulture);
+            }
+        }
     }
 }
