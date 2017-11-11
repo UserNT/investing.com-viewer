@@ -11,6 +11,7 @@ namespace Viewer
 {
     public partial class MainForm : Form, IKeyboardHandler
     {
+        private readonly NotificationForm notificationForm = new NotificationForm();
         private readonly ConcurrentDictionary<string, byte> alreadyDisplayedComments = new ConcurrentDictionary<string, byte>();
         private readonly DotsProgressBar progressBar;
         private readonly ChromiumWebBrowser browser;
@@ -462,6 +463,11 @@ namespace Viewer
 
         public async void onNewComment(string id, string base64, string imagePath)
         {
+            if (WindowState != FormWindowState.Minimized)
+            {
+                return;
+            }
+
             if (!alreadyDisplayedComments.TryAdd(id, 0))
             {
                 return;
@@ -470,11 +476,23 @@ namespace Viewer
             try
             {
                 var notificationImage = await NotificationBuilder.CreateNotificationImageAsync(base64, imagePath);
+
+                Invoke((Action)(() =>
+                {
+                    notificationForm.Push(notificationImage);
+
+                    notificationForm.Show();
+                }));
             }
             catch (Exception ex)
             {
                 Log(ex.Message);
             }
+        }
+
+        protected override void OnActivated(EventArgs e)
+        {
+            notificationForm.Hide();
         }
     }
 }
